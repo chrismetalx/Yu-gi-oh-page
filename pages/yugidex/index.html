@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--fonts-->
+  <link href="https://fonts.cdnfonts.com/css/abc-ginto-nord-unlicensed-trial" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/gg-sans-2" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/abc-ginto-nord-unlicensed-trial" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boldonse&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!--icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yu-Gi-Oh!</title>
+  <link rel="shortcut icon" href="../../image/yugioh.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="">
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+        <img class="img-nav-yugi" src="../../image/yugilogo.png" alt="yugilogo">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarcontent">
+        <ul class="navbar-nav d-flex align-items-center justify-content-stalign-items-center">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../../index.html">
+              <i class="bi bi-house img-logo"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class="bi bi-card-image img-logo"></i> Yugidex
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="div-button-nav">
+        <a type="button" class="btn button-notification position-relative" href="../deck/index.html">
+          MyDeck
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <!-- menu hamburguer -->
+    <div class="menu-controls">
+      <button class="menu-toggle" aria-label="Open menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <button class="menu-close" aria-label="Close menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <ul class="nav-menu d-none">
+      <li class="nav-item"><a href="../../index.html"><i class="bi bi-house img-logo"></i> Home</a></li>
+      <li class="nav-item"><a href="index.html"><i class="bi bi-card-image img-logo"></i> Yugidex</a></li>
+      <li class="nav-item">
+        <a id="button-color" type="button" class="btn button-notification-hamburguer" href="../deck/index.html">
+          <p class="text-center">myDeck</p>
+          <span class="translate-middle badge rounded-pill bg-danger show-number">
+
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!--section 1-->
+  <section class="seccion-one">
+    <div class="blog-hero-container">
+      <div class="container-section-main container-section-main-b">
+        <div class="div-hero d-flex justify-content-center align-items-center">
+          <img class="img-hero" src="../../image/EXODIA_Forbidden-List_SECTION.webp" alt="img-banner">
+          <h2 class="p-absoulute">
+            YOUR DREAM <p class="strong-slogan"> CARD</p> AWAITS!
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- logo yugidex -->
+  <div class="div-logo-yugidex">
+    <img class="yugidex-logo" src="../../image/yugidex-high-resolution-logo-2.png" alt="img-banner">
+    <img class="card-logo" src="../../image/card-traditional.png" alt="img-banner">
+  </div>
+  <hr>
+  <!-- accordion filter -->
+  <div class="accordion-container">
+    <div class="accordion accordion-flush div-hero-cards" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header d-none">
+          <button class="button-accordeon" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+            aria-expanded="true" aria-controls="flush-collapseOne">
+            <img src="../../image/filter.png" alt="">
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <select id="select" class="form-select select-accordion" aria-label="Default select example"
+              onchange="loadCards()">
+              <option value="">Select Type</option>
+              <option value="Effect Monster">Effect Monster</option>
+              <option value="Flip Effect Monster">Flip Effect card</option>
+              <option value="Normal Monster">Normal card</option>
+              <option value="Link Monster">Link card</option>
+              <option value="Pendulum Effect Monster">Pendulum Effect Monster</option>
+              <option value="Fusion Monster">Fusion Monster</option>
+              <option value="Gemini Monster">Gemini Monster</option>
+              <option value="Normal Tuner Monster">Normal Tuner Monster</option>
+              <option value="Pendulum Effect Fusion Monster">Pendulum Effect Fusion Monster</option>
+              <option value="Pendulum Effect Ritual Monster">Pendulum Effect Ritual Monster</option>
+              <option value="Pendulum Flip Effect Monster">Pendulum Flip Effect Monster</option>
+              <option value="Pendulum Normal Monster">Pendulum Normal Monster</option>
+              <option value="Pendulum Tuner Effect Monster">Pendulum Tuner Effect Monster</option>
+              <option value="Ritual Effect Monster">Ritual Effect Monster</option>
+              <option value="Ritual Monster">Ritual Monster</option>
+              <option value="Skill Card">Skill Card</option>
+              <option value="Spell Card">Spell Card</option>
+              <option value="Spirit Monster">Spirit Monster</option>
+              <option value="Synchro Monster">Synchro Monster</option>
+              <option value="Synchro Pendulum Effect Monster">Synchro Pendulum Effect Monster</option>
+              <option value="Synchro Tuner Monster">Synchro Tuner Monster</option>
+              <option value="Token">Token</option>
+              <option value="Toon Monster">Toon Monster</option>
+              <option value="Trap Card">Trap Card</option>
+              <option value="Tuner Monster">Tuner Monster</option>
+              <option value="Union Effect Monster">Union Effect Monster</option>
+              <option value="XYZ Monster">XYZ Monster</option>
+              <option value="XYZ Pendulum Effect Monster">XYZ Pendulum Effect Monster</option>
+            </select>
+            <select id="select2" class="form-select select-accordion" aria-label="Default select example"
+              onchange="loadCards()">
+              <option value="">Select Attribute</option>
+              <option value="DARK">DARK</option>
+              <option value="DIVINE">DIVINE</option>
+              <option value="EARTH">EARTH</option>
+              <option value="FIRE">FIRE</option>
+              <option value="LIGHT">LIGHT</option>
+              <option value="WATER">WATER</option>
+              <option value="WIND">WIND</option>
+            </select>
+            <select id="select3" class="form-select select-accordion" aria-label="Default select example"
+              onchange="loadCards()">
+              <option value="">Select Stars</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <select id="select4" class="form-select select-accordion" aria-label="Default select example"
+              onchange="loadCards()">
+              <option value="">Select Race</option>
+              <option value="Aqua">Aqua</option>
+              <option value="Beast">Beast</option>
+              <option value="Beast-Warrior">Beast-Warrior</option>
+              <option value="Continuous">Continuous</option>
+              <option value="Continuous">Counter</option>
+              <option value="Creator God">Creator God</option>
+              <option value="Cyberse">Cyberse</option>
+              <option value="Dinosaur">Dinosaur</option>
+              <option value="Divine-Beast">Divine-Beast</option>
+              <option value="Dragon">Dragon</option>
+              <option value="Equip">Equip</option>
+              <option value="Fairy">Fairy</option>
+              <option value="Field">Field</option>
+              <option value="Fiend">Fiend</option>
+              <option value="Fish">Fish</option>
+              <option value="Illusion">Illusion</option>
+              <option value="Insect">Insect</option>
+              <option value="Machine">Machine</option>
+              <option value="Normal">Normal</option>
+              <option value="Plant">Plant</option>
+              <option value="Psychic">Psychic</option>
+              <option value="Pyro">Pyro</option>
+              <option value="Quick-Play">Quick-Play</option>
+              <option value="Reptile">Reptile</option>
+              <option value="Ritual">Ritual</option>
+              <option value="Rock">Rock</option>
+              <option value="Sea Serpent">Sea Serpent</option>
+              <option value="Spellcaster">Spellcaster</option>
+              <option value="Thunder">Thunder</option>
+              <option value="Warrior">Warrior</option>
+              <option value="Winged Beast">Winged Beast</option>
+              <option value="Wyrm">Wyrm</option>
+              <option value="Zombie">Zombie</option>
+            </select>
+            <form class="d-flex form-search" role="search">
+              <input class="form-control me-2 input input-filter" type="search" placeholder="Search Card"
+                aria-label="Search">
+              <button class="btn button-search button-filter" type="submit"><i class="bi bi-search"></i></button>
+            </form>
+          </div>
+          <div class="accordion-buttons">
+            <button class="btn button-search random-button">Random</button>
+            <button class="btn button-reset b-reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="blog-hero-container">
+    <!-- pagination -->
+    <nav aria-label="Page navigation example" class="mt-1 pagination mb-5">
+      <ul class="pagination">
+        <li id="previous" class="page-item previous previous-filter"><a class="page-link btn">&laquo;
+            previous</a>
+        </li>
+        <select id="limit" class="form-select select-card-number" aria-label="Default select example"
+          onchange="loadCards()">
+          <option value="5">Limit 5</option>
+          <option value="10">Limit 10</option>
+          <option value="20">Limit 20</option>
+        </select>
+        <li id="next" class="page-item next next-filter"><a class="page-link btn">next &raquo;</a>
+        </li>
+      </ul>
+    </nav>
+    <p class="p-count text-center"></p>
+    <div class="div-hero-cards mb-5">
+      <div class="div-cards-main div-grid"></div>
+      <!-- loading -->
+      <div id="spinner" class="spinner-border mt-5" role="status">
+        <span class="visually-hidden color-text">Loading...</span>
+      </div>
+    </div>
+    <!-- go top button -->
+    <div class="go-top-container">
+      <div class="go-top-button">
+        <i class="bi bi-arrow-up"></i>
+      </div>
+    </div>
+
+  </div>
+  <!-- toasts -->
+  <div id="liveToast" class="toasts-position toast align-items-center text-bg-success border-0" role="alert"
+    aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        The card has been successfully added to your deck.
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+        aria-label="Close"></button>
+    </div>
+  </div>
+  <!--section footer-->
+  <div class="footer">
+    <div class="container-main">
+      <div class="container container-footer">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4 container-hero-footer">
+            <div class="div-imgyugi d-flex">
+              <img class="yugimain" src="../../image/yugilogo.png" alt="yugilogo">
+            </div>
+            <div class="iconos-footer  d-flex">
+              <a href="" class="icons"><i class="bi bi-twitter-x"></i></a>
+              <a href="" class="icons"><i class="bi bi-threads"></i></a>
+              <a href="" class="icons"><i class="bi bi-discord"></i></a>
+              <a href="" class="icons"><i class="bi bi-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-8 column-8 d-flex">
+            <div class="row row-size col-12">
+              <div class="col-6 col-md-6 col-lg-3 columnasprueba">
+                <h3 class="h3-footer">Yu-Gi-Oh!</h3>
+                <nav class="lista-footer ">
+                  <ul class="ul-footer">
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Yu-Gi-Oh! Portal</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Card Database</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Deck Builder</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Top Decks</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-6 col-md-6 col-lg-3 columnasprueba columna-ocho-dos">
+                <h3 class="h3-footer">PSLegends</h3>
+                <nav class="lista-footer ">
+                  <ul class="ul-footer">
+                    <li class="li-footer">
+                      <a href="" class="a-footer">PSLegends Portal</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">News</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Reviews</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Games</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-6 col-md-6 col-lg-3 columnasprueba">
+                <h3 class="h3-footer">Digimon</h3>
+                <nav class="lista-footer ">
+                  <ul class="ul-footer">
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Digimon Portal</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Card Database</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Deck Builder</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Top Decks</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-6 col-md-6 col-lg-3 columnasprueba columna-ocho-dos">
+                <h3 class="h3-footer">Hearthstone</h3>
+                <nav class="lista-footer ">
+                  <ul class="ul-footer">
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Hearthstone Portal</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Card Database</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Deck Builder</a>
+                    </li>
+                    <li class="li-footer">
+                      <a href="" class="a-footer">Top Decks</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col12-footer">
+            <div class="boton-footer d-flex justify-content-end align-items-end text-white">
+              <div class="imagen-pie d-flex justify-content-start align-items-start">
+                <img src="../../image/kuriboh-1.png" alt="discord" class="img-footer">
+                <p class="paragraph p-footer">The literal and graphic information presented on this site about
+                  Yu-Gi-Oh!, including card images, attribute, level/rank, and type symbols, and card text, is
+                  copyrighted by 4K Media Inc., a subsidiary of Konami Digital Entertainment, Inc. This website is not
+                  produced, endorsed, supported, or affiliated with 4K Media or Konami Digital Entertainment. All other
+                  content © 2016-2025 YGOPRODeck.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div><!--end container-->
+    </div>
+  </div>
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
