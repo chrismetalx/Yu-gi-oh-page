@@ -22,7 +22,7 @@ You also have the option to create a deck by adding your favorite card by clicki
 
 >myDeck<br/>
 
-*In the myDeck section, you can see all the cards you've added to your deck. However, if you haven't added any, you can do so from this section by clicking the "Add Card" button. 
+* In the myDeck section, you can see all the cards you've added to your deck. However, if you haven't added any, you can do so from this section by clicking the "Add Card" button. 
 It displays a container where you can search for a card by name and type and add it. You can also delete it from here. This section also has a card information panel on the left side of the screen, 
 where you can see the card's details. Clicking on the card also displays a card image viewer.
 
