@@ -4,7 +4,7 @@
 This page is about the anime Yugioh, its creator, characters, popular games and its popular traditional card game.<br/>
 
 * **Main Page**: The first section is the main page, which talks about a bit about anime and its plot, the creator of the anime, main characters, anime sagas,
-a brief blurb about the Yugi-Demon section, and the main games.<br/>
+a brief blurb about the Yugidex section, and the main games.<br/>
 
 * **Yugidex**: The Yugidex section is a viewer and also a card search engine. It contains a filter to search for cards or a specific card type,
 in addition to displaying some of the card's details such as its ID, type, and description.
