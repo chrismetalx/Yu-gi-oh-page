@@ -28,7 +28,7 @@ where you can see the card's details. Clicking on the card also displays a card 
 
 ### :pushpin: Link<br/>
 ***
->:link: Link to the project:  https://chrismetalx.github.io/Yu-gi-oh-page/<br/>
+:link: Link to the project:  https://chrismetalx.github.io/Yu-gi-oh-page/<br/>
 
 ***
 **This project was carried out for learning purposes.**
