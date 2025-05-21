@@ -3,6 +3,8 @@
 ***
 This page is about the anime Yugioh, its creator, characters, popular games and its popular traditional card game.<br/>
 
+**Some highlights**:
+
 * **Main Page**: The first section is the main page, which talks about a bit about anime and its plot, the creator of the anime, main characters, anime sagas,
 a brief blurb about the Yugidex section, and the main games.<br/>
 
